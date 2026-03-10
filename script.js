@@ -30,7 +30,6 @@ function findResult() {
     const error = document.getElementById("errorMsg");
 
     if (students[id]) {
-        // റിസൾട്ട് വിവരങ്ങൾ സെറ്റ് ചെയ്യുന്നു
         document.getElementById("resName").innerText = students[id].name;
         document.getElementById("resID").innerText = id;
         document.getElementById("m1").innerText = students[id].m1;
@@ -38,11 +37,9 @@ function findResult() {
         document.getElementById("m3").innerText = students[id].m3;
         document.getElementById("resTotal").innerText = students[id].total;
         
-        // കാർഡ് കാണിക്കുന്നു
         card.style.display = "block";
         error.style.display = "none";
     } else {
-        // ഐഡി തെറ്റാണെങ്കിൽ
         card.style.display = "none";
         error.style.display = "block";
     }
