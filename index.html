@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Result App</title>
+    <title>QUTHBI FINAL EXAM RESULT 2026</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Student Mark Search</h1>
+        <p style="color: #1a73e8; font-weight: bold; margin-bottom: 5px;">CM CENTRE</p>
+        <h1>QUTHBI FINAL EXAM RESULT 2026</h1>
+        
         <div class="search-box">
-            <input type="text" id="studentID" placeholder="ID നമ്പർ നൽകുക (उदा: B210250)">
+            <input type="text" id="studentID" placeholder="Reg.Number നൽകുക">
             <button onclick="findResult()">Search</button>
         </div>
+
         <div id="resultCard" class="result-card" style="display: none;">
-            <h2 id="resName"></h2>
-            <p>ID: <span id="resID"></span></p>
+            <div id="rankBadge" style="float: right; background: #ffd700; padding: 5px 10px; border-radius: 5px; font-weight: bold;">
+                Rank: <span id="resRank"></span>
+            </div>
+            
+            <h2 id="resName" style="text-align: left;"></h2>
+            <p style="text-align: left;">Reg.Number: <span id="resID"></span></p>
+            <hr>
+            
             <div class="marks-grid">
-                <div class="mark-item">Mark 1: <b id="m1"></b></div>
-                <div class="mark-item">Mark 2: <b id="m2"></b></div>
-                <div class="mark-item">Mark 3: <b id="m3"></b></div>
+                <div class="mark-item">بخاري: <b id="m1"></b></div>
+                <div class="mark-item">ملا حسن: <b id="m2"></b></div>
+                <div class="mark-item">بيضاوي: <b id="m3"></b></div>
             </div>
+            
             <div class="total-box">
-                Total Mark: <span id="resTotal"></span>
+                Total: <span id="resTotal"></span>
             </div>
+            <div id="resStatus" style="margin-top: 10px; font-weight: bold; color: green;">PASS</div>
         </div>
-        <p id="errorMsg" style="color: red; display: none;">ക്ഷമിക്കണം, ഈ ഐഡി ലഭ്യമല്ല!</p>
+        <p id="errorMsg" style="color: red; display: none;">ക്ഷമിക്കണം, ഈ Reg.Number ലഭ്യമല്ല!</p>
     </div>
     <script src="script.js"></script>
 </body>
